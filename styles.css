@@ -1,0 +1,110 @@
+:root {
+  /*Primary*/
+  --Light_Cyan: hsl(193, 38%, 86%);
+  --Neon_Green: hsl(150, 100%, 66%);
+  /*Neutral*/
+  --Grayish_Blue: hsl(217, 19%, 38%);
+  --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+  --Dark_Blue: hsl(218, 23%, 16%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  letter-spacing: 1.2px;
+  height: 50px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark_Blue);
+}
+section {
+  margin: 0 15px;
+  border-radius: 10px;
+  background-color: var(--Dark_Grayish_Blue);
+  text-align: center;
+  height: 300px;
+  min-width: 345px;
+  width: auto;
+  z-index: 0;
+  padding: 0 20px;
+}
+.advice {
+  color: var(--Neon_Green);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 25px;
+}
+.api_description {
+  color: var(--Light_Cyan);
+  font-size: 28px;
+  font-weight: 800;
+  height: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--Neon_Green);
+  cursor: pointer;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease-in-out;
+}
+button > img.rotate {
+  transform: rotate(360deg);
+  transition: transform 1s ease-in-out;
+}
+button img {
+  width: 50%;
+}
+button:hover {
+  box-shadow: 0px 0px 20px var(--Neon_Green);
+}
+@media screen and (min-width: 480px) {
+  .mobile_divide {
+    opacity: 0;
+  }
+  .divider_container {
+    background-image: url(/images/pattern-divider-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .divider_container {
+    width: 90%;
+  }
+}
